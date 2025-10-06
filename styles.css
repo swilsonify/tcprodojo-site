@@ -67,6 +67,44 @@ a{color:var(--text);text-decoration:none}
 /* Lists */
 .list{display:grid;gap:14px}
 .list .item{background:var(--elev);padding:16px;border-radius:12px;border:1px solid #252530}
+/* ======= BRAND ACCENT OVERRIDES ======= */
+
+/* Buttons */
+.btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: #2374C8; /* lighter TC blue */
+  box-shadow: 0 0 12px rgba(26,98,176,0.6);
+}
+
+/* Outlined buttons */
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* Header links + nav hover */
+.main-nav a:hover,
+.main-nav a:focus {
+  color: var(--accent);
+}
+
+/* Section titles + highlights */
+h2, h3 {
+  color: var(--accent);
+}
+
 
 /* Contact */
 .contact-form{display:grid;gap:12px}
