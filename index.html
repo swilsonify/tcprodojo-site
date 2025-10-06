@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Torture Chamber Pro Wrestling Dojo</title>
+  <meta name="description" content="Train like a pro at Torture Chamber Pro Wrestling Dojo, Montreal's international hub for elite wrestling education. Classes for all ages and skill levels." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <!-- Landing overlay animation -->
+  <div id="intro-overlay" class="intro-overlay">
+    <div class="intro-mark">
+      <img src="assets/logos/logo-primary.png" alt="TC Pro Dojo Logo" onerror="this.style.display='none'"/>
+      <h1>Torture Chamber</h1>
+      <p>Pro Wrestling Dojo • Montreal</p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">
+        <img src="assets/logos/logo-mark.png" alt="TC Pro Dojo" onerror="this.style.display='none'">
+        <span>TC Pro Dojo</span>
+      </a>
+      <nav id="main-nav" class="main-nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Training</a>
+        <a href="#shop">Shop</a>
+        <a href="#calendar">Calendar</a>
+        <a href="#success">Success Stories</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact" class="btn btn-sm">Contact</a>
+      </nav>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Home / Hero -->
+    <section id="home" class="section hero">
+      <div class="container grid-2">
+        <div class="hero-copy">
+          <h1 class="display">Built for Champions.</h1>
+          <p class="lead">For 21+ years, Torture Chamber Pro Wrestling Dojo has turned ambition into results—training athletes from Montreal to the world with discipline, safety, and showmanship.</p>
+          <div class="cta-row">
+            <a href="#services" class="btn">View Classes</a>
+            <a href="#contact" class="btn btn-outline">Book a Tryout</a>
+          </div>
+          <div class="badges">
+            <span class="pill">Ages 8–Adult</span>
+            <span class="pill">Beginner → Pro Pathway</span>
+            <span class="pill">International Placements</span>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="assets/images/hero-ring.jpg" alt="Training ring" class="rounded shadow" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about">
+      <div class="container grid-2">
+        <div>
+          <h2>Montreal’s International Wrestling School</h2>
+          <p>Founded by coach and promoter <strong>Rodney Kellman</strong> (aka <strong>Dru Onyx / Soa Amine</strong>), Torture Chamber Pro Wrestling Dojo delivers a complete journey—from fundamentals to televised performance. Our grads tour globally and work across radio, TV and film. In 2025, we celebrate our 21st anniversary and we’re recruiting the next wave of champions.</p>
+          <ul class="checklist">
+            <li>Progressive curriculum for every level</li>
+            <li>Strength, conditioning & ring IQ</li>
+            <li>Promo craft, character & crowd work</li>
+            <li>Career mentorship & tryout prep</li>
+          </ul>
+        </div>
+        <div>
+          <img src="assets/cartoons/mascot.png" alt="TC Dojo Mascot" class="rounded shadow" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / Training -->
+    <section id="services" class="section services">
+      <div class="container">
+        <h2>Training Pathways</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Foundations (Beginner)</h3>
+            <p>Safe falls, footwork, lockups, cardio and core strength. Perfect entry for all ages.</p>
+            <div class="meta">2–3 days/week • Evenings</div>
+          </article>
+          <article class="card">
+            <h3>Advanced Ring Craft</h3>
+            <p>Match structure, timing, heat/comeback psychology, tag dynamics and finishes.</p>
+            <div class="meta">Coach placement required</div>
+          </article>
+          <article class="card">
+            <h3>Promo & Character Lab</h3>
+            <p>Mic skills, persona development, costumes and media training for TV/social.</p>
+            <div class="meta">Weekly studio sessions</div>
+          </article>
+          <article class="card">
+            <h3>Pro Pathway</h3>
+            <p>Industry tryouts, bookings, touring prep and agent showcases through our network.</p>
+            <div class="meta">Invite only</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section id="shop" class="section shop">
+      <div class="container">
+        <h2>Official Merch</h2>
+        <p>Rep the Chamber. Limited drops, global shipping. (Hook up with Shopify or Snipcart—placeholders below.)</p>
+        <div class="card-grid">
+          <article class="card product">
+            <img src="assets/images/tee.jpg" alt="TC Tee" onerror="this.style.display='none'">
+            <h3>TC Pro Tee</h3>
+            <div class="meta">$29.00 CAD</div>
+            <button class="btn btn-sm">Add to Cart</button>
+          </article>
+          <article class="card product">
+            <img src="assets/images/hoodie.jpg" alt="Hoodie" onerror="this.style.display='none'">
+            <h3>Champion Hoodie</h3>
+            <div class="meta">$69.00 CAD</div>
+            <button class="btn btn-sm">Add to Cart</button>
+          </article>
+          <article class="card product">
+            <img src="assets/images/cap.jpg" alt="Cap" onerror="this.style.display='none'">
+            <h3>Onyx Cap</h3>
+            <div class="meta">$24.00 CAD</div>
+            <button class="btn btn-sm">Add to Cart</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calendar -->
+    <section id="calendar" class="section calendar">
+      <div class="container">
+        <h2>Dojo & Promotions Calendar</h2>
+        <p>Upcoming classes, seminars and events. Syncs with our data file.</p>
+        <div id="calendar-list" class="list"></div>
+      </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section id="success" class="section success">
+      <div class="container">
+        <h2>Success Stories</h2>
+        <div class="card-grid" id="success-grid">
+          <!-- Filled by app.js from data/blog.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="section blog">
+      <div class="container">
+        <h2>Coach’s Corner</h2>
+        <div id="blog-list" class="list"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="container grid-2">
+        <div>
+          <h2>Visit the Dojo</h2>
+          <p>9800 Rue Meilleur, Suite 200, Montreal, QC, Canada</p>
+          <p>Email: <a href="mailto:info@tcprodojo.com">info@tcprodojo.com</a></p>
+          <p>Instagram: <a href="https://www.instagram.com/druonyx.tcprodojo/" target="_blank" rel="noopener">druonyx.tcprodojo</a></p>
+          <p>Facebook: <a href="https://www.facebook.com/tcprodojo/" target="_blank" rel="noopener">/tcprodojo</a></p>
+        </div>
+        <form class="contact-form" name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact">
+          <label>Full name <input required type="text" name="name"></label>
+          <label>Email <input required type="email" name="email"></label>
+          <label>Message <textarea required name="message" rows="4"></textarea></label>
+          <button class="btn" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Torture Chamber Pro Wrestling Dojo • All rights reserved.</p>
+      <a href="/admin">Editor Login</a>
+    </div>
+  </footer>
+</body>
+</html>
