@@ -1,15 +1,19 @@
 /* ---------- Brand ---------- */
 :root{
   :root{
-  --bg:#08090B;          /* deep charcoal background */
-  --elev:#101217;        /* raised card sections */
-  --text:#F5F7FA;        /* bright text */
-  --muted:#A7A9B5;       /* secondary text */
-  --accent:#1A62B0;      /* Torture Chamber Blue */
-  --accent-2:#FFFFFF;    /* clean white secondary */
-  --graphite:#1E2430;    /* border tone */
-  --radius:18px;         /* keep your modern rounded edges */
+  --bg:#08090B;
+  --elev:#101217;
+  --text:#F5F7FA;
+  --muted:#A7A9B5;
+  --accent:#1A62B0;   /* TC Blue */
+  --accent-2:#FFFFFF;
+  --graphite:#1E2430;
+  --radius:18px;
 }
+git add styles.css
+git commit -m "Brand colors: TC blue"
+git push
+
 }
 }
 *{box-sizing:border-box}
