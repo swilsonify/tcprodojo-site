@@ -1,27 +1,28 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: swilsonify/tcprodojo-site
   branch: main
 
-media_folder: "assets/images"
-public_folder: "/assets/images"
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
 
 collections:
-  - name: "posts"
-    label: "Blog Posts"
-    folder: "data/posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Excerpt", name: "excerpt", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "index.html"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "body", widget: "markdown" }
 
-  - name: "calendar"
-    label: "Calendar"
-    folder: "data/events"
+  - name: "blog"
+    label: "Blog"
+    folder: "blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Location", name: "location", widget: "string", required: false}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
