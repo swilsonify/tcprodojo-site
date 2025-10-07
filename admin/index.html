@@ -30,3 +30,16 @@
     <noscript>You need JavaScript enabled to use the admin.</noscript>
   </body>
 </html>
+<!-- Netlify Identity Global Initialization -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
