@@ -1,0 +1,9 @@
+[build]
+  functions = "netlify/functions"
+
+# You already have _headers; keeping this here is fine too.
+[[headers]]
+  for = "/admin/config.yml"
+  [headers.values]
+    Content-Type = "text/yaml; charset=utf-8"
+    Access-Control-Allow-Origin = "*"
