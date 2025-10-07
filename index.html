@@ -224,3 +224,22 @@
   </footer>
 </body>
 </html>
+<!-- Netlify Identity Global Initialization -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      // If not logged in, open login modal
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+
+    // Auto-open Identity widget when visiting /#/identity
+    if (window.location.hash === "#/identity") {
+      window.netlifyIdentity.open();
+    }
+  }
+</script>
