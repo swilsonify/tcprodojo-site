@@ -1,0 +1,12 @@
+{
+  "name": "tcprodojo-site",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "tinacms dev -c \"npx http-server -p 3000\"",
+    "build": "tinacms build"
+  },
+  "devDependencies": {
+    "@tinacms/cli": "^1.5.30",
+    "tinacms": "^1.5.21"
+  }
+}
