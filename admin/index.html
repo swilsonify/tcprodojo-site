@@ -1,45 +1,13 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>TC Pro Dojo Admin</title>
-
-    <!-- Netlify Identity widget (needed for git-gateway auth) -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
     <!-- Decap (Netlify) CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-
-    <script>
-      // Force init in case auto-init hangs
-      window.CMS_MANUAL_INIT = true;
-      document.addEventListener("DOMContentLoaded", function () {
-        CMS.init();
-      });
-
-      // Optional: auto-open Identity widget if user not logged in
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) window.netlifyIdentity.on("login", () => window.location.reload());
-        });
-      }
-    </script>
+    <script src="https://unpkg.com/decap-cms@3/dist/decap-cms.js"></script>
   </head>
   <body>
     <noscript>You need JavaScript enabled to use the admin.</noscript>
   </body>
 </html>
-<!-- Netlify Identity Global Initialization -->
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", (user) => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
