@@ -1,0 +1,90 @@
+import { Instagram, Facebook, Mail, MapPin, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const Footer = () => {
+  return (
+    <footer className="bg-black border-t border-blue-500/20">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Logo & Tagline */}
+          <div className="col-span-1 md:col-span-2">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-12 h-12 rounded-full border-2 border-blue-500 flex items-center justify-center bg-black">
+                <div className="text-center">
+                  <div className="text-blue-500 text-xs font-bold leading-none">20</div>
+                  <div className="text-white text-xs font-bold leading-none">04</div>
+                </div>
+              </div>
+              <div>
+                <div className="text-white font-bold text-xl tracking-wide torture-text">TORTURE CHAMBER</div>
+                <div className="text-xs text-blue-400 font-semibold">PRO WRESTLING DOJO</div>
+              </div>
+            </div>
+            <p className="text-gray-400 text-sm mb-4">
+              Train Like a Champion. Built for Champions. Since 2004, we've been forging the next generation of professional wrestling talent.
+            </p>
+            <div className="flex space-x-4">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-blue-500 flex items-center justify-center text-blue-500 hover:bg-blue-500 hover:text-white transition-colors"
+                data-testid="instagram-link"
+              >
+                <Instagram size={20} />
+              </a>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-blue-500 flex items-center justify-center text-blue-500 hover:bg-blue-500 hover:text-white transition-colors"
+                data-testid="facebook-link"
+              >
+                <Facebook size={20} />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-white font-bold mb-4 text-sm tracking-wider">QUICK LINKS</h3>
+            <ul className="space-y-2">
+              <li><Link to="/training" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Training Programs</Link></li>
+              <li><Link to="/classes" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Class Schedule</Link></li>
+              <li><Link to="/events" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Upcoming Events</Link></li>
+              <li><Link to="/pros" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Our Trainers</Link></li>
+              <li><Link to="/shop" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Shop</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-white font-bold mb-4 text-sm tracking-wider">CONTACT</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start space-x-2 text-gray-400 text-sm">
+                <MapPin size={16} className="mt-1 flex-shrink-0" />
+                <span>123 Champion Street<br />Wrestling District, WR 12345</span>
+              </li>
+              <li className="flex items-center space-x-2 text-gray-400 text-sm">
+                <Phone size={16} />
+                <span>(555) TORTURE</span>
+              </li>
+              <li className="flex items-center space-x-2 text-gray-400 text-sm">
+                <Mail size={16} />
+                <span>info@torturechamber.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-8 pt-8 border-t border-blue-500/20 text-center">
+          <p className="text-gray-500 text-sm">
+            &copy; {new Date().getFullYear()} Torture Chamber Pro Wrestling Dojo. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
