@@ -109,12 +109,9 @@ const Training = () => {
           <div className="gradient-border mx-auto w-24 mb-6"></div>
           <div className="mb-4">
             <img 
-              src="/images/your-excuses.jpg" 
+              src="/images/your-excuses-v2.webp" 
               alt="Your Excuses Are Your Own" 
-              className="max-w-3xl mx-auto w-full px-4"
-              style={{
-                mixBlendMode: 'lighten'
-              }}
+              className="max-w-4xl mx-auto w-full px-4"
             />
           </div>
           <p className="text-gray-400 text-lg max-w-3xl mx-auto">
