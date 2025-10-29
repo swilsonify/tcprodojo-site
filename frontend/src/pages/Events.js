@@ -10,47 +10,43 @@ const Events = () => {
   const upcomingEvents = [
     {
       id: 1,
-      title: 'Student Showcase 2025',
+      title: 'TC Winter Showcase 2025',
       date: 'February 15, 2025',
       time: '7:00 PM',
       location: 'Torture Chamber Main Arena',
-      description: 'Watch our students demonstrate what they\'ve learned in front of a live audience. See the future stars of professional wrestling in action!',
+      description: 'Watch our students and pro graduates battle it out in an action-packed evening of professional wrestling. Special guest appearances confirmed!',
       attendees: '200+',
-      price: 'Free',
-      status: 'Open'
+      ticketLink: '/shop' // Links to shop page
     },
     {
       id: 2,
-      title: 'Pro Wrestling Workshop',
-      date: 'March 8, 2025',
-      time: '1:00 PM - 5:00 PM',
-      location: 'Torture Chamber Training Center',
-      description: 'Special guest workshop with independent wrestling stars. Learn advanced techniques and get insider tips from working professionals.',
-      attendees: '50',
-      price: '$75',
-      status: 'Selling Fast'
+      title: 'Pro Wrestling Invitational',
+      date: 'March 22, 2025',
+      time: '8:00 PM',
+      location: 'Montreal Convention Center',
+      description: 'TC Pro Dojo presents an inter-promotional event featuring talent from across North America. Championship matches and special attractions.',
+      attendees: '500+',
+      ticketLink: '/shop'
     },
     {
       id: 3,
-      title: 'Championship Tryouts',
-      date: 'April 22, 2025',
-      time: '10:00 AM',
+      title: 'Spring Training Exhibition',
+      date: 'April 19, 2025',
+      time: '6:00 PM',
       location: 'Torture Chamber Main Arena',
-      description: 'Open tryouts for our advanced performance team. Successful candidates will be featured in upcoming showcase events.',
-      attendees: 'Limited',
-      price: '$50',
-      status: 'Registration Required'
+      description: 'See our advanced students showcase new moves and characters. Free admission for current TC students!',
+      attendees: '150+',
+      ticketLink: '/shop'
     },
     {
       id: 4,
-      title: 'Alumni Reunion Show',
-      date: 'May 30, 2025',
-      time: '6:00 PM',
-      location: 'Torture Chamber Main Arena',
-      description: 'A special event featuring Torture Chamber alumni who have gone on to professional success. Meet the graduates and see where training here can take you.',
-      attendees: '300+',
-      price: '$20',
-      status: 'Open'
+      title: 'TC 21st Anniversary Celebration',
+      date: 'June 7, 2025',
+      time: '7:00 PM',
+      location: 'Special Venue TBA',
+      description: '21 years of building champions! A massive event celebrating TC history with alumni returns, championship matches, and surprises.',
+      attendees: '1000+',
+      ticketLink: '/shop'
     }
   ];
 
