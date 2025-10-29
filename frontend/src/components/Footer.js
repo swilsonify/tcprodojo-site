@@ -74,9 +74,12 @@ const Footer = () => {
                 <Phone size={16} />
                 <span>(555) TORTURE</span>
               </li>
-              <li className="flex items-center space-x-2 text-gray-400 text-sm">
+              <li className="flex items-start space-x-2 text-gray-400 text-sm">
                 <Mail size={16} />
-                <span>info@torturechamber.com</span>
+                <div>
+                  <div>info@tcprodojo.com</div>
+                  <div className="text-xs text-gray-500">General Inquiries</div>
+                </div>
               </li>
             </ul>
           </div>
