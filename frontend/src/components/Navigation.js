@@ -26,7 +26,8 @@ const Navigation = () => {
             <img 
               src="/images/circle-logo.jpg" 
               alt="Torture Chamber Logo" 
-              className="w-16 h-16 rounded-full"
+              className="w-16 h-16 rounded-full object-cover"
+              style={{ aspectRatio: '1/1' }}
             />
             <div>
               <div className="text-xs text-blue-400 font-semibold tracking-wider">TRAIN LIKE A CHAMPION</div>
