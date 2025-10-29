@@ -114,6 +114,80 @@ async def get_status_checks():
     
     return status_checks
 
+# Classes Endpoints
+@api_router.get("/classes", response_model=List[WrestlingClass])
+async def get_classes():
+    # Return default classes for now
+    default_classes = [
+        {"id": 1, "day": "Monday", "time": "6:00 PM - 8:00 PM", "title": "Fundamentals", "instructor": "Coach Mike", "level": "Beginner", "spots": 8},
+        {"id": 2, "day": "Monday", "time": "8:00 PM - 10:00 PM", "title": "Advanced Techniques", "instructor": "Coach Sarah", "level": "Advanced", "spots": 5},
+        {"id": 3, "day": "Tuesday", "time": "7:00 PM - 9:00 PM", "title": "High-Flying", "instructor": "Coach James", "level": "Intermediate", "spots": 6},
+        {"id": 4, "day": "Wednesday", "time": "6:00 PM - 8:00 PM", "title": "Ring Psychology", "instructor": "Coach Mike", "level": "All Levels", "spots": 10},
+        {"id": 5, "day": "Wednesday", "time": "8:00 PM - 10:00 PM", "title": "Strength & Conditioning", "instructor": "Coach Tony", "level": "All Levels", "spots": 12},
+        {"id": 6, "day": "Thursday", "time": "7:00 PM - 9:00 PM", "title": "Technical Wrestling", "instructor": "Coach Sarah", "level": "Intermediate", "spots": 7},
+        {"id": 7, "day": "Friday", "time": "6:00 PM - 8:00 PM", "title": "Fundamentals", "instructor": "Coach Mike", "level": "Beginner", "spots": 8},
+        {"id": 8, "day": "Friday", "time": "8:00 PM - 10:00 PM", "title": "Sparring Session", "instructor": "All Coaches", "level": "Advanced", "spots": 10},
+        {"id": 9, "day": "Saturday", "time": "10:00 AM - 12:00 PM", "title": "Weekend Warriors", "instructor": "Coach James", "level": "All Levels", "spots": 15},
+        {"id": 10, "day": "Saturday", "time": "2:00 PM - 4:00 PM", "title": "Pro Training", "instructor": "Coach Sarah", "level": "Advanced", "spots": 5},
+    ]
+    return default_classes
+
+# Bookings Endpoints
+@api_router.post("/bookings", response_model=Booking)
+async def create_booking(booking_data: BookingCreate):
+    booking = Booking(**booking_data.model_dump())
+    
+    # Convert to dict and serialize datetime to ISO string for MongoDB
+    doc = booking.model_dump()
+    doc['created_at'] = doc['created_at'].isoformat()
+    
+    try:
+        await db.bookings.insert_one(doc)
+        logger.info(f"Booking created: {booking.name} for class {booking.class_id}")
+    except Exception as e:
+        logger.error(f"Error creating booking: {e}")
+    
+    return booking
+
+@api_router.get("/bookings", response_model=List[Booking])
+async def get_bookings():
+    bookings = await db.bookings.find({}, {"_id": 0}).to_list(1000)
+    
+    # Convert ISO string timestamps back to datetime objects
+    for booking in bookings:
+        if isinstance(booking.get('created_at'), str):
+            booking['created_at'] = datetime.fromisoformat(booking['created_at'])
+    
+    return bookings
+
+# Contact Form Endpoints
+@api_router.post("/contact", response_model=ContactMessage)
+async def submit_contact(contact_data: ContactCreate):
+    contact = ContactMessage(**contact_data.model_dump())
+    
+    # Convert to dict and serialize datetime to ISO string for MongoDB
+    doc = contact.model_dump()
+    doc['created_at'] = doc['created_at'].isoformat()
+    
+    try:
+        await db.contacts.insert_one(doc)
+        logger.info(f"Contact form submitted: {contact.name} - {contact.subject}")
+    except Exception as e:
+        logger.error(f"Error submitting contact form: {e}")
+    
+    return contact
+
+@api_router.get("/contacts", response_model=List[ContactMessage])
+async def get_contacts():
+    contacts = await db.contacts.find({}, {"_id": 0}).to_list(1000)
+    
+    # Convert ISO string timestamps back to datetime objects
+    for contact in contacts:
+        if isinstance(contact.get('created_at'), str):
+            contact['created_at'] = datetime.fromisoformat(contact['created_at'])
+    
+    return contacts
+
 # Include the router in the main app
 app.include_router(api_router)
 
