@@ -1,13 +1,13 @@
 .pattern-bg {
   background-color: #000;
-  background-image: url('/images/cross-pattern.jpg');
+  background-image: url('../public/images/cross-pattern.jpg');
   background-repeat: repeat;
   background-size: 200px 200px;
 }
 
 .hero-pattern {
   background-color: #000;
-  background-image: url('/images/cross-pattern.jpg');
+  background-image: url('../public/images/cross-pattern.jpg');
   background-repeat: repeat;
   background-size: 200px 200px;
 }
