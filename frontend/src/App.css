@@ -7,9 +7,10 @@
 }
 
 .torture-text {
-  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-family: 'Oswald', 'Impact', 'Arial Black', sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .glow-blue {
