@@ -12,7 +12,8 @@ const Footer = () => {
               <img 
                 src="/images/circle-logo.jpg" 
                 alt="Torture Chamber Logo" 
-                className="w-16 h-16 rounded-full"
+                className="w-16 h-16 rounded-full object-cover"
+                style={{ aspectRatio: '1/1' }}
               />
               <div>
                 <div className="text-white font-bold text-xl tracking-wide torture-text">TORTURE CHAMBER</div>
