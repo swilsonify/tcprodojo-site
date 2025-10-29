@@ -4,14 +4,11 @@ import Footer from './Footer';
 
 const Layout = () => {
   return (
-    <div 
-      className="min-h-screen relative"
-    >
+    <div className="min-h-screen relative bg-black">
       {/* Background Pattern Layer */}
       <div 
         className="fixed inset-0 -z-10"
         style={{
-          backgroundColor: '#000',
           backgroundImage: 'url(/images/cross-pattern.jpg)',
           backgroundRepeat: 'repeat',
           backgroundSize: '200px 200px',
