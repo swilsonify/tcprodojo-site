@@ -68,17 +68,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-2 text-gray-400 text-sm">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>123 Champion Street<br />Wrestling District, WR 12345</span>
+                <span>9800 Rue Meilleur<br />Montréal, QC H3L 3J4</span>
               </li>
-              <li className="flex items-center space-x-2 text-gray-400 text-sm">
-                <Phone size={16} />
-                <span>(555) TORTURE</span>
-              </li>
-              <li className="flex items-start space-x-2 text-gray-400 text-sm">
-                <Mail size={16} />
-                <div>
-                  <div>info@tcprodojo.com</div>
-                  <div className="text-xs text-gray-500">General Inquiries</div>
+              <li>
+                <div className="flex items-start space-x-2 text-gray-400 text-sm">
+                  <Mail size={16} />
+                  <div>
+                    <div>info@tcprodojo.com</div>
+                    <div className="text-xs text-gray-500">General Inquiries</div>
+                  </div>
                 </div>
               </li>
             </ul>
