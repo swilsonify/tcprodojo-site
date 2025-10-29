@@ -68,15 +68,6 @@ const Events = () => {
     }
   ];
 
-  const getStatusColor = (status) => {
-    switch (status) {
-      case 'Open': return 'bg-green-500/20 text-green-400 border-green-500/50';
-      case 'Selling Fast': return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
-      case 'Registration Required': return 'bg-blue-500/20 text-blue-400 border-blue-500/50';
-      default: return 'bg-gray-500/20 text-gray-400 border-gray-500/50';
-    }
-  };
-
   return (
     <div className="pt-28 pb-20 px-4" data-testid="events-page">
       <div className="container mx-auto">
