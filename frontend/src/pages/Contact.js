@@ -183,21 +183,9 @@ const Contact = () => {
                   <div>
                     <h3 className="text-white font-semibold mb-1">Visit Us</h3>
                     <p className="text-gray-400">
-                      123 Champion Street<br />
-                      Wrestling District, WR 12345
+                      9800 Rue Meilleur<br />
+                      Montréal, QC H3L 3J4
                     </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="text-white" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">Call Us</h3>
-                    <p className="text-gray-400">(555) TORTURE</p>
-                    <p className="text-gray-400 text-sm">Mon-Fri: 9AM - 10PM</p>
-                    <p className="text-gray-400 text-sm">Sat-Sun: 10AM - 6PM</p>
                   </div>
                 </div>
 
