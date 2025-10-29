@@ -71,7 +71,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up stagger-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up stagger-3">
             <Link
               to="/classes"
               className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg text-lg transition-all hover-lift"
