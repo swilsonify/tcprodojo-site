@@ -59,7 +59,8 @@ const Home = () => {
               <img 
                 src="/images/circle-logo.jpg" 
                 alt="Torture Chamber Logo" 
-                className="w-40 h-40 mx-auto rounded-full mb-4"
+                className="w-40 h-40 mx-auto rounded-full mb-4 object-cover"
+                style={{ aspectRatio: '1/1' }}
               />
               <div className="text-blue-400 font-semibold tracking-widest text-sm">TRAIN LIKE A CHAMPION</div>
             </div>
