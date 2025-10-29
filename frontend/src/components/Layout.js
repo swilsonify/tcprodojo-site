@@ -12,7 +12,8 @@ const Layout = () => {
           backgroundImage: 'url(/images/cross-pattern.jpg)',
           backgroundRepeat: 'repeat',
           backgroundSize: '200px 200px',
-          opacity: 0.75
+          opacity: 1,
+          filter: 'brightness(1.5) contrast(1.2)'
         }}
       />
       <Navigation />
