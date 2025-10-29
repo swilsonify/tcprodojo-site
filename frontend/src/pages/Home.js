@@ -164,7 +164,7 @@ const Home = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white torture-text mb-4">CHAMPION TESTIMONIALS</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white torture-text mb-4">TESTIMONIALS</h2>
             <div className="gradient-border mx-auto w-24 mb-6"></div>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
               Hear from those who've walked the path from trainee to champion.
