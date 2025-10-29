@@ -214,8 +214,6 @@ const Training = () => {
 
         {/* PRIVATE CLASSES */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-white torture-text text-center mb-12">PRIVATE CLASSES</h2>
-          
           <div className="max-w-4xl mx-auto bg-gradient-to-br from-blue-900/40 to-blue-950/60 border-2 border-blue-500 rounded-lg p-10 shadow-2xl shadow-blue-500/30 relative overflow-hidden">
             {/* Premium Badge */}
             <div className="absolute top-4 right-4">
@@ -229,7 +227,7 @@ const Training = () => {
             
             <div className="relative z-10">
               <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold text-white mb-2">{privateClasses.title}</h3>
+                <h2 className="text-5xl md:text-6xl font-bold text-white torture-text mb-4">{privateClasses.title}</h2>
                 <div className="text-blue-400 text-lg font-semibold mb-8">{privateClasses.subtitle}</div>
                 
                 <div className="inline-block bg-black/40 border border-blue-500/30 rounded-lg p-6 mb-6">
