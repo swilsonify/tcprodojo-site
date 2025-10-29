@@ -7,47 +7,98 @@ const Training = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const programs = [
+  const wrestlingPrograms = [
     {
-      title: 'Beginner Fundamentals',
-      duration: '3 Months',
+      title: 'Beginner',
+      subtitle: 'ALL AGES',
+      duration: '3-6 Months',
       price: '$299/month',
-      description: 'Perfect for those new to professional wrestling. Learn the basics of ring work, safety, and foundational techniques.',
+      description: 'Step into the ring for the first time. Learn the fundamentals of pro wrestling from day one.',
       features: [
-        'Basic bumps and falls',
+        'Safe bump falls, turnbuckle, clothesline',
         'Ring awareness and positioning',
         'Fundamental holds and moves',
-        'Safety protocols',
-        'Physical conditioning',
-        '2 classes per week'
+        'Safety protocols and etiquette',
+        'Basic training, conditioning and practice routines',
+        '2-3 classes per week'
       ]
     },
     {
-      title: 'Intermediate Development',
-      duration: '6 Months',
+      title: 'Advanced',
+      subtitle: 'Curriculum',
+      duration: '6-12 Months',
       price: '$399/month',
-      description: 'Take your skills to the next level. Advanced techniques, character development, and match psychology.',
+      description: 'Develop cutting-edge ring psychology and high-skill sequences that will take your abilities to the next level.',
       features: [
         'Advanced technical wrestling',
-        'High-flying maneuvers',
-        'Character development',
-        'Promo and mic skills',
-        'Match psychology',
-        '3 classes per week',
-        'Sparring sessions'
+        'High-flying maneuvers and specialty moves',
+        'Character development and persona',
+        'Promo and microphone skills',
+        'Match psychology and storytelling',
+        '3-4 classes per week',
+        'Sparring sessions with pros'
       ],
       popular: true
     },
     {
-      title: 'Professional Track',
-      duration: '12 Months',
+      title: 'Pro Pathway',
+      subtitle: 'Promotion Or Deployment',
+      duration: '12+ Months',
       price: '$599/month',
-      description: 'For serious athletes ready to go pro. Comprehensive training covering all aspects of professional wrestling.',
+      description: 'Join the Pro Track where student meets industry. Receive advanced training and booking opportunities into shows for real experience.',
       features: [
-        'All intermediate features',
-        'Advanced character work',
-        'Booking and promotion basics',
-        'Industry connections',
+        'All intermediate curriculum included',
+        'Advanced character work and branding',
+        'Industry networking and connections',
+        'Booking opportunities at live events',
+        'Video package creation for promoters',
+        'Unlimited class access',
+        'One-on-one coaching sessions',
+        'Performance opportunities at partner promotions'
+      ]
+    }
+  ];
+
+  const boxingPrograms = [
+    {
+      title: 'Boxing Beginners',
+      subtitle: 'ALL AGES',
+      duration: 'Ongoing',
+      price: '$249/month',
+      features: [
+        'Foundation, proper stance, hand position',
+        'Footwork, head movement, and defense',
+        'Basic training, conditioning and practice routines',
+        '2-3 classes per week'
+      ]
+    },
+    {
+      title: 'Advanced',
+      subtitle: 'Curriculum',
+      duration: 'Ongoing',
+      price: '$349/month',
+      features: [
+        'Advanced combination techniques',
+        'Sparring training with live opponents',
+        'Strength and conditioning focus',
+        'Competition prep if desired',
+        '3-4 classes per week'
+      ]
+    },
+    {
+      title: 'Self-Defense',
+      subtitle: 'Learn How To Protect Yourself',
+      duration: 'Ongoing',
+      price: '$199/month',
+      features: [
+        'Practical self-defense techniques',
+        'Fitness, cardio, and endurance building',
+        'For all levels of experience',
+        'It makes you strong, capable and confident!',
+        '2 classes per week'
+      ]
+    }
+  ];
         'Video package creation',
         'Unlimited class access',
         'One-on-one coaching',
