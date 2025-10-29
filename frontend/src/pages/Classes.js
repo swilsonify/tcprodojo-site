@@ -207,10 +207,58 @@ const Classes = () => {
 
         {/* Weekly Schedule */}
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-white torture-text mb-8 text-center">WEEKLY CLASSES</h2>
+          <h2 className="text-3xl font-bold text-white torture-text mb-4 text-center">WEEKLY CLASSES</h2>
+          
+          {/* Class Type Filter */}
+          <div className="flex justify-center gap-4 mb-8">
+            <button
+              onClick={() => setClassFilter('All')}
+              className={`px-6 py-2 rounded font-semibold transition-colors ${
+                classFilter === 'All' 
+                  ? 'bg-blue-600 text-white' 
+                  : 'bg-black border border-blue-500/20 text-gray-400 hover:text-white'
+              }`}
+              data-testid="filter-all"
+            >
+              ALL CLASSES
+            </button>
+            <button
+              onClick={() => setClassFilter('Wrestling')}
+              className={`px-6 py-2 rounded font-semibold transition-colors ${
+                classFilter === 'Wrestling' 
+                  ? 'bg-blue-600 text-white' 
+                  : 'bg-black border border-blue-500/20 text-gray-400 hover:text-white'
+              }`}
+              data-testid="filter-wrestling"
+            >
+              PRO WRESTLING
+            </button>
+            <button
+              onClick={() => setClassFilter('Boxing')}
+              className={`px-6 py-2 rounded font-semibold transition-colors ${
+                classFilter === 'Boxing' 
+                  ? 'bg-blue-600 text-white' 
+                  : 'bg-black border border-blue-500/20 text-gray-400 hover:text-white'
+              }`}
+              data-testid="filter-boxing"
+            >
+              BOXING
+            </button>
+            <button
+              onClick={() => setClassFilter('Fitness')}
+              className={`px-6 py-2 rounded font-semibold transition-colors ${
+                classFilter === 'Fitness' 
+                  ? 'bg-blue-600 text-white' 
+                  : 'bg-black border border-blue-500/20 text-gray-400 hover:text-white'
+              }`}
+              data-testid="filter-fitness"
+            >
+              FITNESS
+            </button>
+          </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {currentClasses.map((classItem) => (
+            {filteredClasses.map((classItem) => (
               <div
                 key={classItem.id}
                 className="bg-black border border-blue-500/20 rounded-lg p-6 hover-lift"
