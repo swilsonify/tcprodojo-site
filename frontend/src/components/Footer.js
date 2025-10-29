@@ -13,7 +13,11 @@ const Footer = () => {
                 src="/images/circle-logo.jpg" 
                 alt="Torture Chamber Logo" 
                 className="w-16 h-16 rounded-full object-cover"
-                style={{ aspectRatio: '1/1' }}
+                style={{ 
+                  aspectRatio: '1/1',
+                  mixBlendMode: 'lighten',
+                  opacity: 0.95
+                }}
               />
               <div>
                 <div className="text-white font-bold text-xl tracking-wide torture-text">TORTURE CHAMBER</div>
