@@ -265,8 +265,13 @@ const Classes = () => {
                 data-testid={`class-${classItem.id}`}
               >
                 <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{classItem.title}</h3>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <h3 className="text-2xl font-bold text-white">{classItem.title}</h3>
+                      <span className="px-2 py-1 rounded text-xs font-semibold bg-gray-700 text-gray-300">
+                        {classItem.type}
+                      </span>
+                    </div>
                     <div className="flex items-center space-x-2 text-blue-400 mb-2">
                       <CalendarIcon size={16} />
                       <span className="font-semibold">{classItem.day}</span>
