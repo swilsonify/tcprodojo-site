@@ -62,13 +62,50 @@ const Home = () => {
             />
           </div>
 
-          <div className="max-w-3xl mx-auto mb-12 animate-fade-in-up stagger-2">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Your Excuses Are Your Own.</h2>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Step into the ring. Commit to your strength. Whether you're here for pro wrestling, boxing, or pushing your limits, 
-              Torture Chamber is where dreams become reality. We don't train amateurs. We build champions. 
-              Train with the best to become the best. Founded by world-class pro wrestlers in 2004.
+          <div className="max-w-5xl mx-auto mb-12 animate-fade-in-up stagger-2">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Built for Champions.</h2>
+            <h3 className="text-2xl md:text-3xl font-bold text-blue-400 mb-8">Montreal's International Pro Wrestling School</h3>
+            <p className="text-gray-300 text-lg leading-relaxed mb-12">
+              Founded by coach and promoter Rodney Kellman (aka Dru Onyx / Soa Amin), Torture Chamber Pro Wrestling Dojo delivers 
+              a complete journey - from fundamentals to televised performance. Our grads tour globally and work across radio, TV and film. 
+              In 2025, we celebrate our 21st anniversary and we're recruiting the next wave of champions.
             </p>
+
+            {/* Photo Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+              <div className="aspect-square bg-gray-800 rounded-lg flex items-center justify-center hover-lift">
+                <div className="text-gray-600 text-center">
+                  <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-xs">Training Action</span>
+                </div>
+              </div>
+              <div className="aspect-square bg-gray-800 rounded-lg flex items-center justify-center hover-lift">
+                <div className="text-gray-600 text-center">
+                  <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-xs">Ring Work</span>
+                </div>
+              </div>
+              <div className="aspect-square bg-gray-800 rounded-lg flex items-center justify-center hover-lift">
+                <div className="text-gray-600 text-center">
+                  <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-xs">Champions</span>
+                </div>
+              </div>
+              <div className="aspect-square bg-gray-800 rounded-lg flex items-center justify-center hover-lift">
+                <div className="text-gray-600 text-center">
+                  <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-xs">Performance</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up stagger-3">
