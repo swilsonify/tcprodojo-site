@@ -198,7 +198,7 @@ const Home = () => {
             Join the next generation of professional wrestlers. Your journey starts here.
           </p>
           <Link
-            to="/contact"
+            to="/training"
             className="inline-block px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg text-xl transition-all hover-lift"
             data-testid="cta-contact-button"
           >
