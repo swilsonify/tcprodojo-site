@@ -107,7 +107,16 @@ const Training = () => {
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white torture-text mb-4">TRAINING PROGRAMS</h1>
           <div className="gradient-border mx-auto w-24 mb-6"></div>
-          <p className="text-3xl font-bold text-white mb-4">Your Excuses Are Your Own.</p>
+          <div className="mb-4">
+            <img 
+              src="/images/your-excuses.jpg" 
+              alt="Your Excuses Are Your Own" 
+              className="max-w-3xl mx-auto w-full px-4"
+              style={{
+                mixBlendMode: 'lighten'
+              }}
+            />
+          </div>
           <p className="text-gray-400 text-lg max-w-3xl mx-auto">
             Whether you're here to train in pro wrestling, boxing, or want to push your limits through combat sports, 
             we have proven pathways to take you from beginner to professional athlete.
