@@ -68,8 +68,7 @@ const Training = () => {
       { label: '2 SESSIONS', price: '$150' },
       { label: '4 SESSIONS', price: '$250' }
     ],
-    additionalInfo: '3 Month, 6 Month, & 12 Month Private Training rates available upon request.',
-    contact: 'Reach out to sign up druonyx@gmail.com'
+    additionalInfo: '3 Month, 6 Month, & 12 Month Private Training rates available upon request.'
   };
 
   return (
