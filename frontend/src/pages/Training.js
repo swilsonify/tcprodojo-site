@@ -248,7 +248,8 @@ const Training = () => {
                 </div>
                 
                 <div className="text-gray-300 text-sm mb-6">
-                  <p className="font-semibold text-blue-300">{privateClasses.additionalInfo}</p>
+                  <p className="font-semibold text-blue-300 mb-2">{privateClasses.additionalInfo}</p>
+                  <p className="text-blue-400">Contact: druonyx@tcprodojo.com</p>
                 </div>
               </div>
 
