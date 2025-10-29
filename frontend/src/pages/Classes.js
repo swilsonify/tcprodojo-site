@@ -57,6 +57,11 @@ const Classes = () => {
   ];
 
   const currentClasses = classes.length > 0 ? classes : defaultClasses;
+  
+  // Filter classes based on selected type
+  const filteredClasses = classFilter === 'All' 
+    ? currentClasses 
+    : currentClasses.filter(c => c.type === classFilter);
 
   const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
