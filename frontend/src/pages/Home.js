@@ -59,6 +59,10 @@ const Home = () => {
               src="/images/homepage-logo.jpg" 
               alt="Torture Chamber Pro Wrestling Dojo" 
               className="max-w-2xl mx-auto w-full px-4"
+              style={{
+                mixBlendMode: 'lighten',
+                opacity: 0.92
+              }}
             />
           </div>
 
