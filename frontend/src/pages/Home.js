@@ -53,30 +53,14 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero-pattern pt-32 pb-20 px-4">
         <div className="container mx-auto text-center">
-          {/* Logo */}
+          {/* Complete Logo */}
           <div className="mb-8 animate-fade-in-up">
-            <div className="inline-block">
-              <img 
-                src="/images/circle-logo.jpg" 
-                alt="Torture Chamber Logo" 
-                className="w-40 h-40 mx-auto rounded-full mb-4 object-cover"
-                style={{ aspectRatio: '1/1' }}
-              />
-              <div className="text-blue-400 font-semibold tracking-widest text-sm">TRAIN LIKE A CHAMPION</div>
-            </div>
-          </div>
-
-          {/* Main Title with Logo Image */}
-          <div className="mb-6 animate-fade-in-up stagger-1">
             <img 
-              src="/images/torture-chamber-logo.png" 
-              alt="Torture Chamber" 
-              className="max-w-2xl mx-auto w-full"
+              src="/images/homepage-logo.jpg" 
+              alt="Torture Chamber Pro Wrestling Dojo" 
+              className="max-w-2xl mx-auto w-full px-4"
             />
           </div>
-          <p className="text-blue-400 text-xl md:text-2xl font-semibold mb-4 animate-fade-in-up stagger-2">
-            PRO WRESTLING DOJO
-          </p>
 
           <div className="max-w-3xl mx-auto mb-12 animate-fade-in-up stagger-3">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Your Excuses Are Your Own.</h2>
