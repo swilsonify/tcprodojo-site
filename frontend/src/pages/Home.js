@@ -62,7 +62,7 @@ const Home = () => {
             />
           </div>
 
-          <div className="max-w-3xl mx-auto mb-12 animate-fade-in-up stagger-3">
+          <div className="max-w-3xl mx-auto mb-12 animate-fade-in-up stagger-2">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Your Excuses Are Your Own.</h2>
             <p className="text-gray-300 text-lg leading-relaxed">
               Step into the ring. Commit to your strength. Whether you're here for pro wrestling, boxing, or pushing your limits, 
