@@ -216,34 +216,57 @@ const Training = () => {
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-white torture-text text-center mb-12">PRIVATE CLASSES</h2>
           
-          <div className="max-w-4xl mx-auto bg-black border border-blue-500/20 rounded-lg p-8">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-white mb-2">{privateClasses.title}</h3>
-              <div className="text-blue-400 text-sm font-semibold mb-6">{privateClasses.subtitle}</div>
-              
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                {privateClasses.pricingOptions.map((option, idx) => (
-                  <div key={idx} className="text-center">
-                    <div className="text-white font-bold text-2xl">{option.price}</div>
-                    <div className="text-gray-400 text-sm">{option.label}</div>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="text-gray-300 text-sm space-y-2">
-                <p>{privateClasses.additionalInfo}</p>
-                <p>{privateClasses.contact}</p>
-              </div>
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-blue-900/40 to-blue-950/60 border-2 border-blue-500 rounded-lg p-10 shadow-2xl shadow-blue-500/30 relative overflow-hidden">
+            {/* Premium Badge */}
+            <div className="absolute top-4 right-4">
+              <span className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-2 rounded-full text-xs font-bold shadow-lg">
+                ⭐ PREMIUM TRAINING
+              </span>
             </div>
+            
+            {/* Glow effect */}
+            <div className="absolute inset-0 bg-blue-500/5 blur-3xl"></div>
+            
+            <div className="relative z-10">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold text-white mb-2">{privateClasses.title}</h3>
+                <div className="text-blue-400 text-lg font-semibold mb-8">{privateClasses.subtitle}</div>
+                
+                <div className="inline-block bg-black/40 border border-blue-500/30 rounded-lg p-6 mb-6">
+                  <div className="grid grid-cols-3 gap-6">
+                    {privateClasses.pricingOptions.map((option, idx) => (
+                      <div key={idx} className="text-center">
+                        <div className="text-blue-400 font-bold text-3xl mb-2">{option.price}</div>
+                        <div className="text-gray-300 text-sm font-semibold">{option.label}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="bg-black/30 rounded-lg p-6 mb-6">
+                  <div className="text-gray-200 space-y-3">
+                    <p className="text-lg">✓ One-on-one personalized coaching</p>
+                    <p className="text-lg">✓ Flexible scheduling to fit your needs</p>
+                    <p className="text-lg">✓ Accelerated skill development</p>
+                    <p className="text-lg">✓ Custom training plans</p>
+                  </div>
+                </div>
+                
+                <div className="text-gray-300 text-sm space-y-2 mb-6">
+                  <p className="font-semibold text-blue-300">{privateClasses.additionalInfo}</p>
+                  <p className="text-blue-400">{privateClasses.contact}</p>
+                </div>
+              </div>
 
-            <div className="text-center mt-6">
-              <Link
-                to="/contact"
-                className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded transition-colors"
-                data-testid="enroll-private-button"
-              >
-                CONTACT US
-              </Link>
+              <div className="text-center">
+                <Link
+                  to="/contact"
+                  className="inline-block px-12 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold text-lg rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-blue-500/50"
+                  data-testid="enroll-private-button"
+                >
+                  BOOK YOUR PRIVATE SESSION →
+                </Link>
+              </div>
             </div>
           </div>
         </div>
