@@ -37,14 +37,14 @@ const Home = () => {
       text: 'Training at Torture Chamber transformed my career. The dedication and expertise of the coaches is unmatched. I went from amateur to pro in just two years.'
     },
     {
-      name: 'Sarah "Lightning" Chen',
-      role: 'Independent Circuit Champion',
-      text: 'The intensity and professionalism here pushed me beyond my limits. Best decision I ever made was walking through these doors.'
+      name: 'Sarah Chen',
+      role: 'Fitness Enthusiast',
+      text: 'I joined to get in shape and ended up finding a passion I never knew I had. The community here is supportive and welcoming to all skill levels.'
     },
     {
-      name: 'James "Titan" Williams',
-      role: 'Former Student, Current Trainer',
-      text: 'Started as a student in 2010, now I\'m proud to train the next generation. This place builds champions, period.'
+      name: 'James Williams',
+      role: 'Beginner Student',
+      text: 'Never thought I could do this at my age, but the coaches made me feel comfortable from day one. Best decision I ever made for my confidence and fitness.'
     }
   ];
 
