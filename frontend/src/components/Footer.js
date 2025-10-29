@@ -25,7 +25,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-400 text-sm mb-4">
-              Built for Champions. Since 2004, we've been forging the next generation of professional wrestling talent.
+              Built for Champions.<br />
+              Since 2004, we've been forging the next generation of professional wrestling talent.
             </p>
             <div className="flex space-x-4">
               <a
