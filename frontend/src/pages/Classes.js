@@ -13,6 +13,7 @@ const Classes = () => {
   const [showBookingModal, setShowBookingModal] = useState(false);
   const [classes, setClasses] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [classFilter, setClassFilter] = useState('All'); // New filter state
 
   useEffect(() => {
     window.scrollTo(0, 0);
