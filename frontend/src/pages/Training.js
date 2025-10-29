@@ -247,9 +247,8 @@ const Training = () => {
                   </div>
                 </div>
                 
-                <div className="text-gray-300 text-sm space-y-2 mb-6">
+                <div className="text-gray-300 text-sm mb-6">
                   <p className="font-semibold text-blue-300">{privateClasses.additionalInfo}</p>
-                  <p className="text-blue-400">{privateClasses.contact}</p>
                 </div>
               </div>
 
