@@ -56,31 +56,33 @@ const Home = () => {
           {/* Logo */}
           <div className="mb-8 animate-fade-in-up">
             <div className="inline-block">
-              <div className="w-32 h-32 mx-auto rounded-full border-4 border-blue-500 flex items-center justify-center bg-black mb-4">
-                <div className="text-center">
-                  <div className="text-blue-500 text-2xl font-bold">20</div>
-                  <div className="text-white text-2xl font-bold">04</div>
-                </div>
-              </div>
+              <img 
+                src="/images/circle-logo.jpg" 
+                alt="Torture Chamber Logo" 
+                className="w-40 h-40 mx-auto rounded-full mb-4"
+              />
               <div className="text-blue-400 font-semibold tracking-widest text-sm">TRAIN LIKE A CHAMPION</div>
             </div>
           </div>
 
-          {/* Main Title */}
-          <h1 className="text-6xl md:text-8xl font-bold text-white torture-text glow-blue mb-6 animate-fade-in-up stagger-1">
-            TORTURE<br />
-            <span className="text-white">CHAMBER</span>
-          </h1>
+          {/* Main Title with Logo Image */}
+          <div className="mb-6 animate-fade-in-up stagger-1">
+            <img 
+              src="/images/torture-chamber-logo.png" 
+              alt="Torture Chamber" 
+              className="max-w-2xl mx-auto w-full"
+            />
+          </div>
           <p className="text-blue-400 text-xl md:text-2xl font-semibold mb-4 animate-fade-in-up stagger-2">
             PRO WRESTLING DOJO
           </p>
 
           <div className="max-w-3xl mx-auto mb-12 animate-fade-in-up stagger-3">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Built for Champions.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Your Excuses Are Your Own.</h2>
             <p className="text-gray-300 text-lg leading-relaxed">
-              Founded by world-class pro wrestlers in 2004, Torture Chamber is where dreams become reality. 
-              We push our trainees to their absolute limits, molding raw talent into championship caliber athletes. 
-              Train with the best to become the best.
+              Step into the ring. Commit to your strength. Whether you're here for pro wrestling, boxing, or pushing your limits, 
+              Torture Chamber is where dreams become reality. We don't train amateurs. We build champions. 
+              Train with the best to become the best. Founded by world-class pro wrestlers in 2004.
             </p>
           </div>
 
