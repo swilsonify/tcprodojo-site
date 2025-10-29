@@ -183,7 +183,7 @@ const Training = () => {
         <div className="mb-20">
           <div className="max-w-4xl mx-auto bg-black border border-blue-500/20 rounded-lg p-8">
             <div className="text-center mb-6">
-              <h2 className="text-5xl md:text-6xl font-bold text-white torture-text mb-6">{boxingProgram.title}</h2>
+              <h2 className="text-4xl font-bold text-white torture-text mb-6">{boxingProgram.title}</h2>
               <div className="text-4xl font-bold text-white mb-6">{boxingProgram.price}</div>
               
               <div className="grid grid-cols-3 gap-4 mb-6">
