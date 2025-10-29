@@ -113,11 +113,29 @@ const Training = () => {
             />
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-white torture-text mb-4">TRAINING PROGRAMS</h1>
-          <div className="gradient-border mx-auto w-24 mb-6"></div>
-          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-            Whether you're here to train in pro wrestling, boxing, or want to push your limits through combat sports, 
-            we have proven pathways to take you from beginner to professional athlete.
-          </p>
+          <div className="gradient-border mx-auto w-24 mb-8"></div>
+          
+          {/* Step into the Ring */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <h2 className="text-4xl font-bold text-white mb-6">Step into the Ring!</h2>
+            <p className="text-gray-300 text-xl mb-4">We welcome students of ALL levels.</p>
+            <p className="text-gray-300 text-xl mb-4">Qualified instructors in a safe learning environment.</p>
+            <p className="text-gray-300 text-xl">Whether you want to go PRO, get in shape or just experience the thrill of wrestling training, we've got a program for you.</p>
+          </div>
+
+          {/* Why Train With Us */}
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-6">Why Train With Us?</h2>
+            <div className="text-gray-300 text-lg space-y-3">
+              <p>Emphasis on the fundamentals of professional wrestling, all fitness levels welcome.</p>
+              <p>Flexible class schedules.</p>
+              <p>Build confidence, strength, and showmanship.</p>
+              <p>Expert coaching from professional wrestlers.</p>
+              <p>Safe, professional training facility.</p>
+              <p>Flexible class schedules.</p>
+              <p>Build confidence, strength, and showmanship.</p>
+            </div>
+          </div>
         </div>
 
         {/* PRO WRESTLING CLASSES */}
