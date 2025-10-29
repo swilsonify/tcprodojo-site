@@ -9,12 +9,11 @@ const Footer = () => {
           {/* Logo & Tagline */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 rounded-full border-2 border-blue-500 flex items-center justify-center bg-black">
-                <div className="text-center">
-                  <div className="text-blue-500 text-xs font-bold leading-none">20</div>
-                  <div className="text-white text-xs font-bold leading-none">04</div>
-                </div>
-              </div>
+              <img 
+                src="/images/circle-logo.jpg" 
+                alt="Torture Chamber Logo" 
+                className="w-16 h-16 rounded-full"
+              />
               <div>
                 <div className="text-white font-bold text-xl tracking-wide torture-text">TORTURE CHAMBER</div>
                 <div className="text-xs text-blue-400 font-semibold">PRO WRESTLING DOJO</div>
