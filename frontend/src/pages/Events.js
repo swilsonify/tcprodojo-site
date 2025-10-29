@@ -91,27 +91,22 @@ const Events = () => {
                 className="bg-black border border-blue-500/20 rounded-lg p-6 hover-lift"
                 data-testid={`event-${event.id}`}
               >
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{event.title}</h3>
-                    <div className="flex flex-wrap gap-4 text-gray-400">
-                      <div className="flex items-center space-x-2">
-                        <Calendar size={16} />
-                        <span>{event.date}</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Clock size={16} />
-                        <span>{event.time}</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <MapPin size={16} />
-                        <span>{event.location}</span>
-                      </div>
+                <div className="mb-4">
+                  <h3 className="text-2xl font-bold text-white mb-2">{event.title}</h3>
+                  <div className="flex flex-wrap gap-4 text-gray-400">
+                    <div className="flex items-center space-x-2">
+                      <Calendar size={16} />
+                      <span>{event.date}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Clock size={16} />
+                      <span>{event.time}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <MapPin size={16} />
+                      <span>{event.location}</span>
                     </div>
                   </div>
-                  <span className={`mt-4 md:mt-0 inline-block px-3 py-1 rounded-full text-xs font-semibold border ${getStatusColor(event.status)}`}>
-                    {event.status}
-                  </span>
                 </div>
 
                 <p className="text-gray-300 mb-4">{event.description}</p>
