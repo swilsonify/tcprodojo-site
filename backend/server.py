@@ -117,18 +117,26 @@ async def get_status_checks():
 # Classes Endpoints
 @api_router.get("/classes", response_model=List[WrestlingClass])
 async def get_classes():
-    # Return default classes for now
+    # Return default classes with both wrestling and boxing
     default_classes = [
-        {"id": 1, "day": "Monday", "time": "6:00 PM - 8:00 PM", "title": "Fundamentals", "instructor": "Coach Mike", "level": "Beginner", "spots": 8},
-        {"id": 2, "day": "Monday", "time": "8:00 PM - 10:00 PM", "title": "Advanced Techniques", "instructor": "Coach Sarah", "level": "Advanced", "spots": 5},
-        {"id": 3, "day": "Tuesday", "time": "7:00 PM - 9:00 PM", "title": "High-Flying", "instructor": "Coach James", "level": "Intermediate", "spots": 6},
-        {"id": 4, "day": "Wednesday", "time": "6:00 PM - 8:00 PM", "title": "Ring Psychology", "instructor": "Coach Mike", "level": "All Levels", "spots": 10},
-        {"id": 5, "day": "Wednesday", "time": "8:00 PM - 10:00 PM", "title": "Strength & Conditioning", "instructor": "Coach Tony", "level": "All Levels", "spots": 12},
-        {"id": 6, "day": "Thursday", "time": "7:00 PM - 9:00 PM", "title": "Technical Wrestling", "instructor": "Coach Sarah", "level": "Intermediate", "spots": 7},
-        {"id": 7, "day": "Friday", "time": "6:00 PM - 8:00 PM", "title": "Fundamentals", "instructor": "Coach Mike", "level": "Beginner", "spots": 8},
-        {"id": 8, "day": "Friday", "time": "8:00 PM - 10:00 PM", "title": "Sparring Session", "instructor": "All Coaches", "level": "Advanced", "spots": 10},
-        {"id": 9, "day": "Saturday", "time": "10:00 AM - 12:00 PM", "title": "Weekend Warriors", "instructor": "Coach James", "level": "All Levels", "spots": 15},
-        {"id": 10, "day": "Saturday", "time": "2:00 PM - 4:00 PM", "title": "Pro Training", "instructor": "Coach Sarah", "level": "Advanced", "spots": 5},
+        # PRO WRESTLING CLASSES
+        {"id": 1, "day": "Monday", "time": "6:00 PM - 8:00 PM", "title": "Beginner Pro Wrestling", "instructor": "Coach Mike", "level": "Beginner", "spots": 8},
+        {"id": 2, "day": "Monday", "time": "8:00 PM - 10:00 PM", "title": "Advanced Pro Wrestling", "instructor": "Coach Sarah", "level": "Advanced", "spots": 5},
+        {"id": 3, "day": "Tuesday", "time": "7:00 PM - 9:00 PM", "title": "High-Flying & Lucha", "instructor": "Coach James", "level": "Intermediate", "spots": 6},
+        {"id": 4, "day": "Wednesday", "time": "6:00 PM - 8:00 PM", "title": "Ring Psychology & Promos", "instructor": "Coach Mike", "level": "All Levels", "spots": 10},
+        {"id": 5, "day": "Thursday", "time": "7:00 PM - 9:00 PM", "title": "Technical Wrestling", "instructor": "Coach Sarah", "level": "Intermediate", "spots": 7},
+        {"id": 6, "day": "Friday", "time": "6:00 PM - 8:00 PM", "title": "Pro Wrestling Fundamentals", "instructor": "Coach Mike", "level": "Beginner", "spots": 8},
+        {"id": 7, "day": "Friday", "time": "8:00 PM - 10:00 PM", "title": "Pro Wrestling Sparring", "instructor": "All Coaches", "level": "Advanced", "spots": 10},
+        {"id": 8, "day": "Saturday", "time": "10:00 AM - 12:00 PM", "title": "Pro Pathway Weekend Training", "instructor": "Coach James", "level": "All Levels", "spots": 15},
+        # BOXING CLASSES
+        {"id": 9, "day": "Monday", "time": "5:00 PM - 6:30 PM", "title": "Boxing Beginners", "instructor": "Coach Tony", "level": "Beginner", "spots": 12},
+        {"id": 10, "day": "Tuesday", "time": "6:00 PM - 7:30 PM", "title": "Advanced Boxing", "instructor": "Coach Tony", "level": "Advanced", "spots": 8},
+        {"id": 11, "day": "Wednesday", "time": "5:00 PM - 6:30 PM", "title": "Boxing Technique", "instructor": "Coach Marcus", "level": "Intermediate", "spots": 10},
+        {"id": 12, "day": "Thursday", "time": "6:00 PM - 7:30 PM", "title": "Boxing Sparring", "instructor": "Coach Tony", "level": "Advanced", "spots": 6},
+        {"id": 13, "day": "Saturday", "time": "9:00 AM - 10:30 AM", "title": "Self-Defense Boxing", "instructor": "Coach Marcus", "level": "All Levels", "spots": 15},
+        # FITNESS
+        {"id": 14, "day": "Wednesday", "time": "8:00 PM - 10:00 PM", "title": "Strength & Conditioning", "instructor": "Coach Tony", "level": "All Levels", "spots": 12},
+        {"id": 15, "day": "Saturday", "time": "2:00 PM - 4:00 PM", "title": "Pro Athlete Training", "instructor": "Coach Sarah", "level": "Advanced", "spots": 5},
     ]
     return default_classes
 
