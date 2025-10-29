@@ -121,7 +121,7 @@ const Home = () => {
               VIEW CLASS SCHEDULE
             </Link>
             <Link
-              to="/contact"
+              to="/training"
               className="px-8 py-4 bg-transparent border-2 border-blue-500 hover:bg-blue-500 text-white font-bold rounded-lg text-lg transition-all hover-lift"
               data-testid="get-started-button"
             >
