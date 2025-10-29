@@ -129,16 +129,15 @@ const Events = () => {
                   <div className="flex items-center space-x-6 text-gray-400">
                     <div className="flex items-center space-x-2">
                       <Users size={16} />
-                      <span>{event.attendees} attendees</span>
+                      <span>{event.attendees} expected</span>
                     </div>
-                    <div className="text-blue-400 font-semibold">{event.price}</div>
                   </div>
                   <Link
-                    to="/contact"
-                    className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded transition-colors text-center"
-                    data-testid={`register-event-${event.id}-button`}
+                    to={event.ticketLink}
+                    className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded transition-colors text-center"
+                    data-testid={`buy-tickets-${event.id}-button`}
                   >
-                    REGISTER NOW
+                    BUY TICKETS
                   </Link>
                 </div>
               </div>
