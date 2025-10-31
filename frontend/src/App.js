@@ -30,6 +30,7 @@ function App() {
         {/* Admin Routes (No Layout) */}
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/events" element={<AdminEvents />} />
       </Routes>
     </BrowserRouter>
   );
