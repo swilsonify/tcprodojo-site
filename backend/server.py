@@ -284,6 +284,116 @@ async def get_contacts():
     
     return contacts
 
+
+# ==================== ADMIN ROUTES ====================
+
+# Admin Authentication
+@api_router.post("/admin/login", response_model=Token)
+async def admin_login(login_data: AdminLogin):
+    # Check if user exists
+    admin = await db.admins.find_one({"username": login_data.username}, {"_id": 0})
+    
+    if not admin or not verify_password(login_data.password, admin['password_hash']):
+        raise HTTPException(status_code=401, detail="Incorrect username or password")
+    
+    access_token = create_access_token(data={"sub": login_data.username})
+    return {"access_token": access_token, "token_type": "bearer"}
+
+@api_router.get("/admin/verify")
+async def verify_admin(username: str = Depends(verify_token)):
+    return {"username": username, "authenticated": True}
+
+# Admin Event Management
+@api_router.get("/admin/events", response_model=List[EventModel])
+async def get_admin_events(username: str = Depends(verify_token)):
+    events = await db.events.find({}, {"_id": 0}).to_list(1000)
+    for event in events:
+        if isinstance(event.get('created_at'), str):
+            event['created_at'] = datetime.fromisoformat(event['created_at'])
+    return events
+
+@api_router.post("/admin/events", response_model=EventModel)
+async def create_event(event: EventModel, username: str = Depends(verify_token)):
+    doc = event.model_dump()
+    doc['created_at'] = doc['created_at'].isoformat()
+    await db.events.insert_one(doc)
+    return event
+
+@api_router.put("/admin/events/{event_id}", response_model=EventModel)
+async def update_event(event_id: str, event: EventModel, username: str = Depends(verify_token)):
+    doc = event.model_dump()
+    doc['created_at'] = doc['created_at'].isoformat()
+    await db.events.update_one({"id": event_id}, {"$set": doc})
+    return event
+
+@api_router.delete("/admin/events/{event_id}")
+async def delete_event(event_id: str, username: str = Depends(verify_token)):
+    result = await db.events.delete_one({"id": event_id})
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Event not found")
+    return {"message": "Event deleted successfully"}
+
+# Admin Trainer Management
+@api_router.get("/admin/trainers", response_model=List[TrainerModel])
+async def get_admin_trainers(username: str = Depends(verify_token)):
+    trainers = await db.trainers.find({}, {"_id": 0}).to_list(1000)
+    for trainer in trainers:
+        if isinstance(trainer.get('created_at'), str):
+            trainer['created_at'] = datetime.fromisoformat(trainer['created_at'])
+    return trainers
+
+@api_router.post("/admin/trainers", response_model=TrainerModel)
+async def create_trainer(trainer: TrainerModel, username: str = Depends(verify_token)):
+    doc = trainer.model_dump()
+    doc['created_at'] = doc['created_at'].isoformat()
+    await db.trainers.insert_one(doc)
+    return trainer
+
+@api_router.put("/admin/trainers/{trainer_id}", response_model=TrainerModel)
+async def update_trainer(trainer_id: str, trainer: TrainerModel, username: str = Depends(verify_token)):
+    doc = trainer.model_dump()
+    doc['created_at'] = doc['created_at'].isoformat()
+    await db.trainers.update_one({"id": trainer_id}, {"$set": doc})
+    return trainer
+
+@api_router.delete("/admin/trainers/{trainer_id}")
+async def delete_trainer(trainer_id: str, username: str = Depends(verify_token)):
+    result = await db.trainers.delete_one({"id": trainer_id})
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Trainer not found")
+    return {"message": "Trainer deleted successfully"}
+
+# Admin Testimonial Management
+@api_router.get("/admin/testimonials", response_model=List[TestimonialModel])
+async def get_admin_testimonials(username: str = Depends(verify_token)):
+    testimonials = await db.testimonials.find({}, {"_id": 0}).to_list(1000)
+    for testimonial in testimonials:
+        if isinstance(testimonial.get('created_at'), str):
+            testimonial['created_at'] = datetime.fromisoformat(testimonial['created_at'])
+    return testimonials
+
+@api_router.post("/admin/testimonials", response_model=TestimonialModel)
+async def create_testimonial(testimonial: TestimonialModel, username: str = Depends(verify_token)):
+    doc = testimonial.model_dump()
+    doc['created_at'] = doc['created_at'].isoformat()
+    await db.testimonials.insert_one(doc)
+    return testimonial
+
+@api_router.put("/admin/testimonials/{testimonial_id}", response_model=TestimonialModel)
+async def update_testimonial(testimonial_id: str, testimonial: TestimonialModel, username: str = Depends(verify_token)):
+    doc = testimonial.model_dump()
+    doc['created_at'] = doc['created_at'].isoformat()
+    await db.testimonials.update_one({"id": testimonial_id}, {"$set": doc})
+    return testimonial
+
+@api_router.delete("/admin/testimonials/{testimonial_id}")
+async def delete_testimonial(testimonial_id: str, username: str = Depends(verify_token)):
+    result = await db.testimonials.delete_one({"id": testimonial_id})
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Testimonial not found")
+    return {"message": "Testimonial deleted successfully"}
+
+
 # Include the router in the main app
 app.include_router(api_router)
 
