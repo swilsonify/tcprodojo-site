@@ -10,6 +10,7 @@ import Shop from '@/pages/Shop';
 import Contact from '@/pages/Contact';
 import AdminLogin from '@/pages/admin/AdminLogin';
 import AdminDashboard from '@/pages/admin/AdminDashboard';
+import AdminEvents from '@/pages/admin/AdminEvents';
 
 function App() {
   return (
