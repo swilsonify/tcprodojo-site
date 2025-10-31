@@ -407,11 +407,19 @@ def test_unauthorized_access():
     
     all_protected = True
     for endpoint in endpoints_to_test:
-        response = make_request("GET", endpoint)
-        if response and response.status_code in [401, 403]:
-            print_result(True, f"{endpoint} properly protected ({response.status_code} {'Unauthorized' if response.status_code == 401 else 'Forbidden'})")
-        else:
-            print_result(False, f"{endpoint} not properly protected (got {response.status_code if response else 'No response'})")
+        try:
+            url = f"{API_URL}{endpoint}"
+            print(f"Testing unauthorized access to: {url}")
+            response = requests.get(url, timeout=10)
+            print(f"Response status: {response.status_code}")
+            if response.status_code in [401, 403]:
+                print_result(True, f"{endpoint} properly protected ({response.status_code} {'Unauthorized' if response.status_code == 401 else 'Forbidden'})")
+            else:
+                print_result(False, f"{endpoint} not properly protected (got {response.status_code})")
+                all_protected = False
+        except requests.exceptions.RequestException as e:
+            print(f"Request exception for {endpoint}: {e}")
+            print_result(False, f"{endpoint} request failed: {e}")
             all_protected = False
     
     return all_protected
