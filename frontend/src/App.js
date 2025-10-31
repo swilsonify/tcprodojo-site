@@ -11,6 +11,9 @@ import Contact from '@/pages/Contact';
 import AdminLogin from '@/pages/admin/AdminLogin';
 import AdminDashboard from '@/pages/admin/AdminDashboard';
 import AdminEvents from '@/pages/admin/AdminEvents';
+import AdminTrainers from '@/pages/admin/AdminTrainers';
+import AdminTestimonials from '@/pages/admin/AdminTestimonials';
+import AdminContacts from '@/pages/admin/AdminContacts';
 
 function App() {
   return (
@@ -31,6 +34,9 @@ function App() {
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/admin/events" element={<AdminEvents />} />
+        <Route path="/admin/trainers" element={<AdminTrainers />} />
+        <Route path="/admin/testimonials" element={<AdminTestimonials />} />
+        <Route path="/admin/contacts" element={<AdminContacts />} />
       </Routes>
     </BrowserRouter>
   );
