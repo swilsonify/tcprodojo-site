@@ -105,25 +105,25 @@ const AdminDashboard = () => {
   ];
 
   return (
-    <div className=\"min-h-screen bg-black\">
+    <div className="min-h-screen bg-black">
       {/* Header */}
-      <header className=\"bg-gray-900 border-b border-blue-500/20\">
-        <div className=\"container mx-auto px-4 py-4\">
-          <div className=\"flex items-center justify-between\">
-            <div className=\"flex items-center space-x-3\">
+      <header className="bg-gray-900 border-b border-blue-500/20">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-3">
               <img 
-                src=\"/images/circle-logo.jpg\" 
-                alt=\"TC Pro Dojo\" 
-                className=\"w-12 h-12 rounded-full\"
+                src="/images/circle-logo.jpg" 
+                alt="TC Pro Dojo" 
+                className="w-12 h-12 rounded-full"
               />
               <div>
-                <h1 className=\"text-xl font-bold text-white\">TC Pro Dojo Admin</h1>
-                <p className=\"text-sm text-gray-400\">Welcome, {username}</p>
+                <h1 className="text-xl font-bold text-white">TC Pro Dojo Admin</h1>
+                <p className="text-sm text-gray-400">Welcome, {username}</p>
               </div>
             </div>
             <button
               onClick={handleLogout}
-              className=\"flex items-center space-x-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded transition-colors\"
+              className="flex items-center space-x-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded transition-colors"
             >
               <LogOut size={18} />
               <span>Logout</span>
