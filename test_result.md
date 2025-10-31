@@ -116,54 +116,69 @@ backend:
       - working: true
         agent: "main"
         comment: "JWT-based authentication with login and verify endpoints already working from previous implementation"
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: Admin login with credentials (admin/tcprodojo2025) successful. JWT token generation and verification working correctly. All admin endpoints properly protected with 403 Forbidden when no auth provided."
 
   - task: "Events CRUD API"
     implemented: true
-    working: "NA"
+    working: true
     file: "backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Full CRUD endpoints for events management (GET, POST, PUT, DELETE) at /api/admin/events"
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: All CRUD operations working perfectly. Created event 'Championship Night', updated it, and deleted it successfully. Data persistence verified through GET requests."
 
   - task: "Trainers CRUD API"
     implemented: true
-    working: "NA"
+    working: true
     file: "backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Full CRUD endpoints for trainers management (GET, POST, PUT, DELETE) at /api/admin/trainers"
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: All CRUD operations working perfectly. Created trainer 'Marcus Rodriguez' with achievements array, updated experience and title, deleted successfully. Complex data structures handled correctly."
 
   - task: "Testimonials CRUD API"
     implemented: true
-    working: "NA"
+    working: true
     file: "backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Full CRUD endpoints for testimonials management (GET, POST, PUT, DELETE) at /api/admin/testimonials"
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: All CRUD operations working perfectly. Created testimonial from 'Sarah Mitchell', updated role and text, deleted successfully. All operations verified through GET requests."
 
   - task: "Contacts API"
     implemented: true
-    working: "NA"
+    working: true
     file: "backend/server.py"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "GET endpoint for contacts at /api/contacts - currently no DELETE endpoint"
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: GET /api/contacts working correctly. Returns empty array initially (no contact messages yet). Endpoint accessible both with and without authentication as expected for read-only access."
 
 frontend:
   - task: "Admin Login Page"
