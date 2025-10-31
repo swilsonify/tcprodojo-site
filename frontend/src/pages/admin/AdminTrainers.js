@@ -185,7 +185,7 @@ const AdminTrainers = () => {
                     type="text"
                     value={formData.aka}
                     onChange={(e) => setFormData({ ...formData, aka: e.target.value })}
-                    placeholder="\"The Master\""
+                    placeholder='"The Master"'
                     className="w-full px-4 py-2 bg-black border border-blue-500/20 rounded text-white focus:outline-none focus:border-blue-500"
                   />
                 </div>
