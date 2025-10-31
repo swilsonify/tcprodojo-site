@@ -8,11 +8,14 @@ import Events from '@/pages/Events';
 import Pros from '@/pages/Pros';
 import Shop from '@/pages/Shop';
 import Contact from '@/pages/Contact';
+import AdminLogin from '@/pages/admin/AdminLogin';
+import AdminDashboard from '@/pages/admin/AdminDashboard';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Public Routes */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="training" element={<Training />} />
@@ -22,6 +25,10 @@ function App() {
           <Route path="shop" element={<Shop />} />
           <Route path="contact" element={<Contact />} />
         </Route>
+
+        {/* Admin Routes (No Layout) */}
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
       </Routes>
     </BrowserRouter>
   );
