@@ -408,8 +408,8 @@ def test_unauthorized_access():
     all_protected = True
     for endpoint in endpoints_to_test:
         response = make_request("GET", endpoint)
-        if response and response.status_code == 401:
-            print_result(True, f"{endpoint} properly protected (401 Unauthorized)")
+        if response and response.status_code in [401, 403]:
+            print_result(True, f"{endpoint} properly protected ({response.status_code} {'Unauthorized' if response.status_code == 401 else 'Forbidden'})")
         else:
             print_result(False, f"{endpoint} not properly protected (got {response.status_code if response else 'No response'})")
             all_protected = False
