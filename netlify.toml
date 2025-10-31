@@ -1,9 +1,14 @@
 [build]
-  functions = "netlify/functions"
-
-# You already have _headers; keeping this here is fine too.
+  publish = "."
+  
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  
 [[headers]]
-  for = "/admin/config.yml"
+  for = "/*"
   [headers.values]
-    Content-Type = "text/yaml; charset=utf-8"
-    Access-Control-Allow-Origin = "*"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
